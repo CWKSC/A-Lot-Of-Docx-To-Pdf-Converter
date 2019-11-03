@@ -2,7 +2,11 @@
 
 a lot of docx to pdf converter
 
-[C# 笔记 - 批量 docx 到 pdf 转换器](#https://zhuanlan.zhihu.com/p/89958561 )  https://zhuanlan.zhihu.com/p/89958561 
+Since I don't know how to export the C# Project and change the path. The C# project has some problems.
+
+由于我不知道如何导出C＃项目并更改路径。 C＃项目存在一些问题。
+
+[C# 笔记 - 批量 docx 到 pdf 转换器](https://zhuanlan.zhihu.com/p/89958561 )  https://zhuanlan.zhihu.com/p/89958561 
 
 ![Start]( https://raw.githubusercontent.com/CWKSC/A-Lot-Of-Docx-To-Pdf-Converter/master/Image/Start.png )
 
