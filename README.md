@@ -10,6 +10,10 @@ You can look directly at the source code to find out how it works.
 
 你可以直接查看源代码去了解如何工作。
 
+Have a code guide to help you understand below.
+
+下面会有代码导读去帮助你的理解。
+
 [C# 笔记 - 批量 docx 到 pdf 转换器](https://zhuanlan.zhihu.com/p/89958561 ) 
 
 ![Start]( https://raw.githubusercontent.com/CWKSC/A-Lot-Of-Docx-To-Pdf-Converter/master/Image/Start.png )
@@ -124,7 +128,7 @@ private void WordToPDFCompleted(object sender, RunWorkerCompletedEventArgs e)
 private void SelectMultFileButton_Click(object sender, EventArgs e)
 ```
 
-## Code reading 代码导读：
+## Code reading / Guide 代码导读：
 
 1. Start by pressing the button 首先从按下按钮開始
 
