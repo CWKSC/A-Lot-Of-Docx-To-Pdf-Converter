@@ -4,7 +4,11 @@ a lot of docx to pdf converter
 
 Since I don't know how to export the C# Project and change the path. The C# project has some problems.
 
-由于我不知道如何导出C＃项目并更改路径。 C＃项目存在一些问题。
+由于我不知道如何导出 C# 项目并更改路径。C# 项目存在一些问题。
+
+You can look directly at the source code to find out how it works.
+
+你可以直接查看源代码去了解如何工作。
 
 [C# 笔记 - 批量 docx 到 pdf 转换器](https://zhuanlan.zhihu.com/p/89958561 ) 
 
