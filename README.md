@@ -8,17 +8,23 @@ Since I don't know how to export the C# Project and change the path. The C# proj
 
 由於我不知道如何導出C＃項目並更改路徑。C＃項目存在一些問題。
 
+___
+
 You can look directly at the source code to find out how it works.
 
 你可以直接查看源代码去了解如何工作。
 
 你可以直接查看源代碼去了解如何工作。
 
+___
+
 Have a code guide to help you understand below.
 
 下面会有代码导读去帮助你的理解。
 
 下面會有代碼導讀去幫助你的理解。
+
+___
 
 [C# 笔记 - 批量 docx 到 pdf 转换器](https://zhuanlan.zhihu.com/p/89958561 ) 
 
