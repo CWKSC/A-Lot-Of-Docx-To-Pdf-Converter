@@ -4,7 +4,7 @@ a lot of docx to pdf converter
 
 Since I don't know how to export the C# Project and change the path. The C# project has some problems.
 
-由於我不知道如何導出C＃項目並更改路徑。C＃項目存在一些問題。
+由於我不知道如何導出 C# 項目並更改路徑。C# 項目存在一些問題。
 
 ___
 
