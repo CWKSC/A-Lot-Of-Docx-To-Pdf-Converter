@@ -8,15 +8,15 @@ Since I don't know how to export the C# Project and change the path. The C# proj
 
 ___
 
-You can look directly at the source code to find out how it works.
+You can **look directly at the source code** to find out how it works.
 
-你可以直接查看源代碼去了解如何工作。
+你可以**直接查看源代碼**去了解如何工作。
 
 ___
 
-Have a code guide to help you understand below.
+Have a **code guide** to help you understand below.
 
-下面會有代碼導讀去幫助你的理解。
+下面會有**代碼導讀**去幫助你的理解。
 
 ___
 
@@ -135,6 +135,10 @@ private void SelectMultFileButton_Click(object sender, EventArgs e)
 ```
 
 ## Code reading / Guide 代码导读 代碼導讀：
+
+**Before using this, it is recommended to open another browser window for comparison.**
+
+**使用這個之前，建議開啟另一個瀏覽器視窗作為對照。**
 
 1. Start by pressing the button 首先从按下按钮開始 首先從點擊按鈕開始
 
