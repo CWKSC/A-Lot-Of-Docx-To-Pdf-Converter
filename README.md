@@ -4,23 +4,17 @@ a lot of docx to pdf converter
 
 Since I don't know how to export the C# Project and change the path. The C# project has some problems.
 
-由于我不知道如何导出 C# 项目并更改路径。C# 项目存在一些问题。
-
 由於我不知道如何導出C＃項目並更改路徑。C＃項目存在一些問題。
 
 ___
 
 You can look directly at the source code to find out how it works.
 
-你可以直接查看源代码去了解如何工作。
-
 你可以直接查看源代碼去了解如何工作。
 
 ___
 
 Have a code guide to help you understand below.
-
-下面会有代码导读去帮助你的理解。
 
 下面會有代碼導讀去幫助你的理解。
 
