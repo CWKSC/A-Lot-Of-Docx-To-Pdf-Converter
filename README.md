@@ -1,6 +1,8 @@
 # A-Lot-Of-Docx-To-Pdf-Converter
 
-a lot of docx to pdf converter
+Also see: [CWKSC/MultipleThreadPdfConverter: Multiple Thread Pdf Converter (doc, docx, ppt, pptx)](https://github.com/CWKSC/MultipleThreadPdfConverter)
+
+___
 
 Since I don't know how to export the C# Project and change the path. The C# project has some problems.
 
@@ -118,7 +120,7 @@ namespace WordToPdf
 }
 ```
 
-### Member 成员 成員：
+### Member 成員：
 
 ```csharp
 BackgroundWorker[] backgroundWorkers;
@@ -140,13 +142,13 @@ private void SelectMultFileButton_Click(object sender, EventArgs e)
 
 **使用這個之前，建議開啟另一個瀏覽器視窗作為對照。**
 
-1. Start by pressing the button 首先从按下按钮開始 首先從點擊按鈕開始
+1. Start by pressing the button 首先從點擊按鈕開始
 
 ```csharp
 SelectMultFileButton_Click()
 ```
 
-2. Open the file selection window that can be multi-selected 打开可以多重选择的档案选择视窗 打開可以多重選擇的檔案選擇視窗
+2. Open the file selection window that can be multi-selected 打開可以多重選擇的檔案選擇視窗
 
 ```csharp
 OpenFileDialog fileDialog = new OpenFileDialog
@@ -157,9 +159,9 @@ OpenFileDialog fileDialog = new OpenFileDialog
 };
 ```
 
-`Multiselect = true` represents multiple choices. 代表可以多重选择。 代表可以多重選擇。
+`Multiselect = true` represents multiple choices. 代表可以多重選擇。
 
-3. If not press OK, free resources and leave. 如果不是按确定，释放资源并离开。 如果不是按確定，釋放資源並離開。
+3. If not press OK, free resources and leave. 如果不是按確定，釋放資源並離開。
 
 ```csharp
 if (fileDialog.ShowDialog() != DialogResult.OK) { fileDialog.Dispose(); return; }
@@ -167,13 +169,13 @@ if (fileDialog.ShowDialog() != DialogResult.OK) { fileDialog.Dispose(); return; 
 
 4. Get the selected file path and put it in the string array `string[]` 
 
-   获取选择了的档案路径，放到字串阵列 `string[]` 。獲取選擇了的檔案路徑，放到字串框架`string []`
+   獲取選擇了的檔案路徑，放到字串框架`string []`
 
 ```csharp
 string[] names = fileDialog.FileNames;
 ```
 
-5. Set variables about the progress bar 设定有关进度条的变量 設定有關進度條的變量
+5. Set variables about the progress bar 設定有關進度條的變量
 
 ```csharp
 completedJobNum = 0;
@@ -183,7 +185,7 @@ progressBar.Value = 0;
 progressBar.Step = progressBar.Maximum / names.Length;
 ```
 
-6. Create a BackgroundWorker array 创建 BackgroundWorker 陣列 創建 BackgroundWorker 陣列
+6. Create a BackgroundWorker array  創建 BackgroundWorker 陣列
 
 ```csharp
 backgroundWorkers = new BackgroundWorker[totalJob];
@@ -192,8 +194,6 @@ backgroundWorkers = new BackgroundWorker[totalJob];
 [BackgroundWorker Class (System.ComponentModel) | Microsoft Docs](https://link.zhihu.com/?target=https%3A//docs.microsoft.com/en-us/dotnet/api/system.componentmodel.backgroundworker%3Fview%3Dnetframework-4.8)
 
 7. Traverse, generate the path needed by the transformation API, register BackgroundWorker, and run. 
-
-   遍历，生成转换 API 需要的路徑，註冊 BackgroundWorker，運行。
    
    遍歷，生成轉換 API 需要的路徑，註冊 BackgroundWorker，運行。
 
@@ -210,15 +210,13 @@ for (int i = 0; i < names.Length; i++)
 }
 ```
 
-The main work of BackgroundWorker is in this sentence: / BackgroundWorker 主要的工作在这句： BackgroundWorker 主要的工作在這句：
+The main work of BackgroundWorker is in this sentence: / BackgroundWorker 主要的工作在這句：
 
 ```csharp
 backgroundWorkers[i].DoWork += new DoWorkEventHandler(WordToPDF);
 ```
 
 The events that will be executed after the BackgroundWorker completes are in this sentence: 
-
-BackgroundWorker 完成后会执行的事件在这句：
 
 BackgroundWorker 完成後會執行的事件在這句：
 
@@ -228,8 +226,6 @@ backgroundWorkers[i].RunWorkerCompleted += new RunWorkerCompletedEventHandler(Wo
 
 BackgroundWorker runs in this sentence: 
 
-BackgroundWorker 運行在这句：
-
 BackgroundWorker 運行在這句：
 
 ```csharp
@@ -238,13 +234,9 @@ backgroundWorkers[i].RunWorkerAsync(path);
 
 The latter variable is the parameter that it brings to DoWork, and the type will be object. 
 
-后面的变量是它带入去 DoWork 的参数，类型会是 object。
-
 後面的變量是它帶入去 DoWork 的參數，類型會是 object。
 
 8. Go to the main work part of DoWork - WordToPDF() 
-
-   到达主要工作 DoWork 的部分 —— WordToPDF()
    
    到達主要工作 DoWork 的部分 —— WordToPDF()
 
@@ -254,18 +246,16 @@ private void WordToPDF(object sender, DoWorkEventArgs e)
 
 The parameters that RunWorkerAsync takes in are placed in e.Argument instead of directly in the parameter list. 
 
-RunWorkerAsync 带入去的参数会放在 e.Argument ，而不是直接在参数列表。
-
 RunWorkerAsync 帶入去的參數會放在 e.Argument ，而不是直接在參數列表。
 
-9. Read just put in the variable `path` 读取刚刚放进去变量 `path` 讀取剛剛放進去變量 `path`
+9. Read just put in the variable `path` 讀取剛剛放進去變量 `path`
 
 ```csharp
 string sourcePath = ((string[]) e.Argument)[0];
 string targetPath = ((string[]) e.Argument)[1];
 ```
 
-10. Create variables for Word.Application and Document. 创建 Word.Application 和 Document 的变量。 創建 Word.Application 和 Document 的變量。
+10. Create variables for Word.Application and Document.  創建 Word.Application 和 Document 的變量。
 
 ```csharp
 Microsoft.Office.Interop.Word.Application application = new Microsoft.Office.Interop.Word.Application();
@@ -273,8 +263,6 @@ Document document = null;
 ```
 
 11. Set to invisible, Word.Application opens, document accepts, and docx to pdf conversion. 
-
-    设定为不可见，Word.Application 打开，document 接受，进行 docx 到 pdf 的转换。
     
     設定為不可見，Word.Application 打開，document 接受，進行 docx 到 pdf 的轉換。
 
@@ -295,17 +283,13 @@ document.ExportAsFixedFormat(targetPath, WdExportFormat.wdExportFormatPDF, OpenA
 
 There are two required parameters, OutputFileName and ExportFormat. 
 
-有两个必须的参数，OutputFileName 和 ExportFormat 。
-
 有兩個必須的參數，OutputFileName 和 ExportFormat 。
 
 I have added an Optional parameter here: OpenAfterExport, which is determined by the tick option on WinForm.
 
-我这里加了一个 Optional 的参数：OpenAfterExport，由 WinForm 上的勾选项决定。
-
 我這裡加了一個 Optional 的參數：OpenAfterExport，由 WinForm 上的勾選項決定。
 
-12. Catch Exception 抓取错误 抓取錯誤
+12. Catch Exception 抓取錯誤
 
 ```csharp
 catch (Exception ex)
@@ -314,7 +298,7 @@ catch (Exception ex)
 }
 ```
 
-13. Turn off document and application to free resources 关掉 document 和 application 以释放资源  關掉 document 和 application 以釋放資源
+13. Turn off document and application to free resources  關掉 document 和 application 以釋放資源
 
 ```csharp
 finally
@@ -326,8 +310,6 @@ finally
 
 14. Execute events that will be executed after BackgroundWorker completes 
 
-    执行 BackgroundWorker 完成后会执行的事件
-    
     執行 BackgroundWorker 完成後會執行的事件
 
 ```csharp
@@ -339,4 +321,4 @@ private void WordToPDFCompleted(object sender, RunWorkerCompletedEventArgs e)
 }
 ```
 
-This is related to the progress bar, not much to say. 这个跟进度条有关，不多说。 這個跟進度條有關，不多說。
+This is related to the progress bar, not much to say. 這個跟進度條有關，不多說。
