@@ -2,6 +2,8 @@
 
 Also see: [CWKSC/MultipleThreadPdfConverter: Multiple Thread Pdf Converter (doc, docx, ppt, pptx)](https://github.com/CWKSC/MultipleThreadPdfConverter)
 
+This one is more pure and suitable for more formats.
+
 ___
 
 Since I don't know how to export the C# Project and change the path. The C# project has some problems.
